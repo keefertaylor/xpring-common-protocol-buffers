@@ -9,8 +9,8 @@ message SignedTransaction {
     Transaction transaction = 1;
 
     // The signature of the transaction in hexadecimal.
-    string transactionSignatureHex = 2;
+    string transaction_signature_hex = 2;
 
     // The public key of the account which signed the transaction in hexadecimal.
-    string publicKeyHex = 3;
+    string public_key_hex = 3;
 }
