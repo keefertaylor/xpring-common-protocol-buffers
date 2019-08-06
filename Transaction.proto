@@ -16,7 +16,7 @@ message Transaction {
     uint64 sequence = 3;
 
     // Data specific to a the type of transaction being submitted.
-    oneof transactionData {
+    oneof transaction_data {
         Payment payment = 4;
     }
 }
