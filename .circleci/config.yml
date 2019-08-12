@@ -15,7 +15,7 @@ jobs:
       - run:
           name: "Determine latest GRPC release"
           command: |
-            curl -L https://grpc.io/release >> latest_grpc_release.txt
+            echo "CACHE_MISS" >> latest_grpc_release.txt
       - restore_cache:
           keys:
             - grpc-cpp-{{ checksum "latest_grpc_release.txt" }}
