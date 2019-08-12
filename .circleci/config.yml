@@ -18,7 +18,7 @@ jobs:
             curl -L https://grpc.io/release >> latest_grpc_release.txt
       - restore_cache:
           keys:
-            grpc-cpp-{{ checksum "latest_grpc_release.txt" }}
+            - grpc-cpp-{{ checksum "latest_grpc_release.txt" }}
 
       - protobuf/install
 
