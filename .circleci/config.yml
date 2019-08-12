@@ -1,23 +1,19 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
-version: 2
+version: 2.1
+orbs:
+  protobuf: izumin5210/protobuf@0.1.0
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:7.10
 
     working_directory: ~/repo
 
     steps:
       - checkout
-      - run:
-          name: "Install protoc"
-          command: sudo apt install protobuf-compiler
+      - protobuf/install
 
       - run:
-          name: "Compile Protocol Buffers"
+          name: "Compile Protocol Buffer Models"
           command: |
-            mkdir -p generated
+            mkdir -p ./models/generated
+            protoc models/*.proto --proto_path=./models/ --cpp_out ./generated/
