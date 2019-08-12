@@ -13,7 +13,20 @@ jobs:
       - protobuf/install
 
       - run:
-          name: "Compile Protocol Buffer Models"
+          name: "Install GRPC"
           command: |
-            mkdir -p ./models/generated
-            protoc models/*.proto --proto_path=./models/ --cpp_out ./models/generated/
+            git clone -b $(curl -L https://grpc.io/release) https://github.com/grpc/grpc
+            cd grpc
+            git submodule update --init
+            make
+
+      - run: mkdir -p generated
+      - run:
+          name: "Compile Protocol Buffers Models"
+          command: |
+            protoc models/*.proto --proto_path=./models/ --cpp_out ./generated/
+
+      - run:
+          name: "Compile GRPC Protocol Buffers Services"
+          command: |
+            protoc -I ./services/ -I ./models/ --grpc_out=./generated --plugin=protoc-gen-grpc=`which grpc_cpp_plugin` ./services/*.proto ./models/*.proto
