@@ -16,4 +16,4 @@ jobs:
           name: "Compile Protocol Buffer Models"
           command: |
             mkdir -p ./models/generated
-            protoc models/*.proto --proto_path=./models/ --cpp_out ./generated/
+            protoc models/*.proto --proto_path=./models/ --cpp_out ./models/generated/
