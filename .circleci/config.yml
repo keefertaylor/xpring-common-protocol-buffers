@@ -29,4 +29,4 @@ jobs:
       - run:
           name: "Compile GRPC Protocol Buffers Services"
           command: |
-            protoc -I ./services/ -I ./models/ --grpc_out=./generated --plugin=protoc-gen-grpc=`which grpc_cpp_plugin` ./services/*.proto ./models/*.proto
+            protoc -I ./services/ -I ./models/ --grpc_out=./generated --plugin=protoc-gen-grpc=grpc/bins/opt/grpc_cpp_plugin ./services/*.proto ./models/*.proto
