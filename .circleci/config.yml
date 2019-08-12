@@ -15,13 +15,14 @@ jobs:
       - run:
           name: "Determine latest GRPC release"
           command: |
-            echo "CACHE_MISS" >> latest_grpc_release.txt
+            curl -L https://grpc.io/release >> latest_grpc_release.txt
       - restore_cache:
           keys:
             - grpc-cpp-{{ checksum "latest_grpc_release.txt" }}
 
       - protobuf/install
 
+      # Install GRPC if there was not a cache hit.
       - run:
           name: "Install GRPC"
           command: |
