@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+// Available currencies.
+// Next field: 1
+enum Currency {
+    USD = 0;
+}

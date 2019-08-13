@@ -1,17 +1,13 @@
 syntax = "proto3";
 
+import "Currency.proto";
+
 // A representation of an amount of currency in fiat.
 // Next field: 4
 message FiatAmount {
-    // Avaliable currencies.
-    // Next field: 1
-    enum Currency {
-        USD = 0;
-    }
-    
-    // The currency used to value the amount.    
+    // The currency used to value the amount.
     Currency currency = 1;
-    
+
     // The value of the amount.
     string value = 2;
 
