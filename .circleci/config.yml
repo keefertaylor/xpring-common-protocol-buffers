@@ -1,23 +1,47 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
-version: 2
+version: 2.1
+orbs:
+  protobuf: izumin5210/protobuf@0.1.0
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:7.10
 
     working_directory: ~/repo
 
     steps:
       - checkout
+
+      # GRPC CPP is built from source. Try to restore the latest release from cache.
+      - restore_cache:
+          keys:
+            - grpc-cpp
+
+      - protobuf/install
+
+      # Install GRPC if there was not a cache hit.
       - run:
-          name: "Install protoc"
-          command: sudo apt install protobuf-compiler
+          name: "Install GRPC"
+          command: |
+            if [ ! -d grpc ]; then
+            git clone -b $(curl -L https://grpc.io/release) https://github.com/grpc/grpc
+            cd grpc
+            git submodule update --init
+            make
+            fi
+
+      - run: mkdir -p generated
+      - run:
+          name: "Compile Protocol Buffers Models"
+          command: |
+            protoc models/*.proto --proto_path=./models/ --cpp_out ./generated/
 
       - run:
-          name: "Compile Protocol Buffers"
+          name: "Compile GRPC Protocol Buffers Services"
           command: |
-            mkdir -p generated
+            protoc -I ./services/ -I ./models/ --grpc_out=./generated --plugin=protoc-gen-grpc=grpc/bins/opt/grpc_cpp_plugin ./services/*.proto ./models/*.proto
+
+      # Save built GRPC artifacts to cache.
+      - save_cache:
+          key: grpc-cpp
+          paths:
+            - grpc/
