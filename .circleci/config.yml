@@ -12,13 +12,9 @@ jobs:
       - checkout
 
       # GRPC CPP is built from source. Try to restore the latest release from cache.
-      - run:
-          name: "Determine latest GRPC release"
-          command: |
-            curl -L https://grpc.io/release >> latest_grpc_release.txt
       - restore_cache:
           keys:
-            - grpc-cpp-{{ checksum "latest_grpc_release.txt" }}
+            - grpc-cpp
 
       - protobuf/install
 
@@ -46,6 +42,6 @@ jobs:
 
       # Save built GRPC artifacts to cache.
       - save_cache:
-          key: grpc-cpp-{{ checksum "latest_grpc_release.txt" }}
+          key: grpc-cpp
           paths:
             - grpc/
