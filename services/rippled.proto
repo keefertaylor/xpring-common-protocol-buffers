@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 import "SignedTransaction.proto";
-import "XRPAmount.proto"
+import "XRPAmount.proto";
 
 service Rippled {
   rpc GetAccountInfo (AccountInfoRequest) returns (AccountInfo);
