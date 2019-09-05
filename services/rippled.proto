@@ -1,9 +1,11 @@
 syntax = "proto3";
 
 import "SignedTransaction.proto";
+import "XRPAmount.proto"
 
 service Rippled {
   rpc GetAccountInfo (AccountInfoRequest) returns (AccountInfo);
+  rpc GetCurrentFee (CurrentFeeRequest) returns (CurrentFeeResponse);
   rpc Inject (InjectionRequest) returns (InjectionResponse);
 }
 
@@ -27,6 +29,13 @@ message AccountData {
   int64 previous_txn_lgr_seq = 7;
   int64 sequence = 8;
   string index = 9;
+}
+
+message CurrentFeeRequest {
+}
+
+message CurrentFeeResponse {
+  XRPAmount fee = 1;
 }
 
 message InjectionRequest {
