@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package io.xpring;
 
-import "Payment.proto";
-import "XRPAmount.proto";
+import "payment.proto";
+import "xpr_amount.proto";
 
 // A class encompassing all transactions.
 // Next field: 5.

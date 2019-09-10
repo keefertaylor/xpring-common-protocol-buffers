@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package io.xpring;
 
-import "Transaction.proto";
+import "transaction.proto";
 
 // A transaction and associated signature data.
 // Next field: 4
