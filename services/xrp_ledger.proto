@@ -5,7 +5,7 @@ package io.xpring;
 import "signed_transaction.proto";
 import "xrp_amount.proto";
 
-service Rippled {
+service XRPLedger {
   rpc GetAccountInfo (GetAccountInfoRequest) returns (AccountInfo);
   rpc GetCurrentFee (GetFeeRequest) returns (Fee);
   rpc SubmitSignedTransaction (SubmitSignedTransactionRequest) returns (SubmitSignedTransactionResponse);
