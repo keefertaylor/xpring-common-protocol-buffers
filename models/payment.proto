@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package io.xpring;
+
 import "FiatAmount.proto";
 import "XRPAmount.proto";
 

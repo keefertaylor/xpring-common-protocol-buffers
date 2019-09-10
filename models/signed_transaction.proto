@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package io.xpring;
+
 import "Transaction.proto";
 
 // A transaction and associated signature data.

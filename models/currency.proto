@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package io.xpring;
+
 // Available currencies.
 // Next field: 1
 enum Currency {
