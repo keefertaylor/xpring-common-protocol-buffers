@@ -1,15 +1,17 @@
 syntax = "proto3";
 
-import "SignedTransaction.proto";
-import "XRPAmount.proto";
+package io.xpring;
+
+import "signed_transaction.proto";
+import "xrp_amount.proto";
 
 service Rippled {
-  rpc GetAccountInfo (AccountInfoRequest) returns (AccountInfo);
-  rpc GetCurrentFee (CurrentFeeRequest) returns (CurrentFeeResponse);
-  rpc Inject (InjectionRequest) returns (InjectionResponse);
+  rpc GetAccountInfo (GetAccountInfoRequest) returns (AccountInfo);
+  rpc GetCurrentFee (GetFeeRequest) returns (Fee);
+  rpc SubmitSignedTransaction (SubmitSignedTransactionRequest) returns (SubmitSignedTransactionResponse);
 }
 
-message AccountInfoRequest {
+message GetAccountInfoRequest {
   string address = 1;
 }
 
@@ -31,17 +33,17 @@ message AccountData {
   string index = 9;
 }
 
-message CurrentFeeRequest {
+message GetFeeRequest {
 }
 
-message CurrentFeeResponse {
+message Fee {
   XRPAmount fee = 1;
 }
 
-message InjectionRequest {
+message SubmitSignedTransactionRequest {
   SignedTransaction signed_transaction = 1;
 }
 
-message InjectionResponse {
+message SubmitSignedTransactionResponse {
   string operation_hash = 1;
 }
