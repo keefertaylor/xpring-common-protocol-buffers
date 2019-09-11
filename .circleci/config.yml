@@ -30,15 +30,11 @@ jobs:
             fi
 
       - run: mkdir -p generated
-      - run:
-          name: "Compile Protocol Buffers Models"
-          command: |
-            protoc models/*.proto --proto_path=./models/ --cpp_out ./generated/
 
       - run:
           name: "Compile GRPC Protocol Buffers Services"
           command: |
-            protoc -I ./services/ -I ./models/ --grpc_out=./generated --plugin=protoc-gen-grpc=grpc/bins/opt/grpc_cpp_plugin ./proto/*.proto
+            protoc --proto_path=./protos/ --cpp_out ./generated/  --grpc_out=./generated --plugin=protoc-gen-grpc=grpc/bins/opt/grpc_cpp_plugin ./proto/*.proto
 
       # Save built GRPC artifacts to cache.
       - save_cache:
