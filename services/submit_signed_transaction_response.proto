@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package io.xpring;
 
+// A response when a signed transaction is submitted to the ledger.
 message SubmitSignedTransactionResponse {
   string operation_hash = 1;
 }
