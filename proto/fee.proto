@@ -1,9 +1,0 @@
-syntax = "proto3";
-
-package io.xpring;
-
-import "xrp_amount.proto";
-
-message Fee {
-  XRPAmount fee = 1;
-}

@@ -4,8 +4,15 @@ package io.xpring;
 
 import "account_data.proto";
 
+// Information about an account on the ledger.
+// Next field: 4
 message AccountInfo {
+  // The AccountRoot ledger object with this account's information, as stored in the ledger.
   AccountData account_data = 1;
+
+  // The sequence number of the most-current ledger, which was used when retrieving this information.
   int64 ledger_current_index = 2;
+  
+  // True if this data is from a validated ledger version; if omitted or set to false, this data is not final.
   bool validated = 3;
 }

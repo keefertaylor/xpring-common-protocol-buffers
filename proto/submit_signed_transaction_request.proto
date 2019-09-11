@@ -7,5 +7,6 @@ import "signed_transaction.proto";
 // A request to submit the signed transaction to the ledger.
 // Next field: 2
 message SubmitSignedTransactionRequest {
+  // The signed transaction to submit.
   SignedTransaction signed_transaction = 1;
 }
