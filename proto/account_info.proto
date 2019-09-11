@@ -2,17 +2,23 @@ syntax = "proto3";
 
 package io.xpring;
 
-import "account_data.proto";
+import "xrp_amount.proto";
 
 // Information about an account on the ledger.
-// Next field: 4
+// Next field: 6
 message AccountInfo {
-  // The AccountRoot ledger object with this account's information, as stored in the ledger.
-  AccountData account_data = 1;
+  // The account's current XRP balance.
+  XRPAmount balance = 1;
 
-  // The sequence number of the most-current ledger, which was used when retrieving this information.
-  int64 ledger_current_index = 2;
-  
-  // True if this data is from a validated ledger version; if omitted or set to false, this data is not final.
-  bool validated = 3;
+  // The sequence number of the next valid transaction for this account.
+  int64 sequence = 2;
+
+  // The number of objects this account owns in the ledger, which contributes to its owner reserve.
+  int64 owner_count = 3;
+
+  // The identifying hash of the transaction that most recently modified this object.
+  string previous_txn_id = 4;
+
+  // 	The index of the ledger that contains the transaction that most recently modified this object.
+  int64 previous_txn_lgr_seq = 5;
 }
