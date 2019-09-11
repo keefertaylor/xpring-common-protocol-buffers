@@ -17,8 +17,8 @@ message AccountInfo {
   int64 owner_count = 3;
 
   // The identifying hash of the transaction that most recently modified this object.
-  string previous_txn_id = 4;
+  string previous_affecting_transaction_id = 4;
 
   // 	The index of the ledger that contains the transaction that most recently modified this object.
-  int64 previous_txn_lgr_seq = 5;
+  int64 previous_affecting_transaction_ledger_version = 5;
 }
