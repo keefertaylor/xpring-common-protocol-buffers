@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package io.xpring;
+
+import "signed_transaction.proto";
+
+message SubmitSignedTransactionRequest {
+  SignedTransaction signed_transaction = 1;
+}

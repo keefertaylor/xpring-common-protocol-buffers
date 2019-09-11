@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package io.xpring;
+
+import "account_data.proto";
+
+message AccountInfo {
+  AccountData account_data = 1;
+  int64 ledger_current_index = 2;
+  bool validated = 3;
+}
