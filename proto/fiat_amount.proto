@@ -1,6 +1,8 @@
 syntax = "proto3";
 
-import "Currency.proto";
+package io.xpring;
+
+import "currency.proto";
 
 // A representation of an amount of currency in fiat.
 // Next field: 4

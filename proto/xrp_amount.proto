@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package io.xpring;
+
 // A representation of an amount of XRP.
 // Next field: 2
 message XRPAmount {

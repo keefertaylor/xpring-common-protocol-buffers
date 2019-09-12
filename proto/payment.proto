@@ -1,7 +1,9 @@
 syntax = "proto3";
 
-import "FiatAmount.proto";
-import "XRPAmount.proto";
+package io.xpring;
+
+import "fiat_amount.proto";
+import "xrp_amount.proto";
 
 // Payment transaction specific information.
 // Next field: 4
