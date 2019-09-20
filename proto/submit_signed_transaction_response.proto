@@ -12,8 +12,8 @@ message SubmitSignedTransactionResponse {
   int64 engine_result_code = 2;
 
   // Human-readable explanation of the transaction's preliminary result.
-  string engine_result_message = 3;	
+  string engine_result_message = 3;
 
   // The complete transaction in hex string format
-  string tx_blob = 4;
+  string transaction_blob = 4;
 }
