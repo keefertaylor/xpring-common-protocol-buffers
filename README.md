@@ -5,5 +5,5 @@
 The Xpring Common Protocol Buffers Library provides common protocol buffer objects to all client side libraries in the XRP SDK. This library is built to be consumed as a submodule to other libraries, rather than a standalone library. 
 
 Developers likely want to use a top-level library for accessing the Xpring Platform:
-- [XpringJS](http://github.com/xpring-eng/xpring-js): A javascript interface for the Xpring Platform
-- [XpringKit](http://github.com/xpring-eng/xpringkit): A swift interface for the Xpring Platform
+- [XpringJS](http://github.com/xpring-eng/xpring-js): A JavaScript interface for the Xpring Platform
+- [XpringKit](http://github.com/xpring-eng/xpringkit): A Swift interface for the Xpring Platform
