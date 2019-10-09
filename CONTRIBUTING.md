@@ -18,11 +18,12 @@ Additionally, code changes to this library will likely be accompanied by a featu
 
 ## Requirements for a Successful Pull request
 
-- Title is prefixed with "[WIP]" if the PR is not ready for review.
+- Title is prefixed with "[WIP]" if the pull request is not ready for review.
 - Passing continuous integration.
 - Documentation in pull request about how the new functionality will be used in client libraries.
 - Changes to protocol buffers adheres to [Google's Protocol Buffer style guide](https://developers.google.com/protocol-buffers/docs/style).
 - Changes to gRPC services adhere to [Google's API design guidelines](https://cloud.google.com/apis/design/).
+- Pull requests text and comments adhere to the [code of conduct](CODE_OF_CONDUCT.md) for this repository.
 
 ## Building The Library
 
