@@ -6,7 +6,7 @@ We're thrilled you're interested and your help is greatly appreciated. Contribut
 
 ## About This Library
 
-TODO: Diagram of Xpring SDK
+<img src="architecture.png" alt="Architecture Diagram of Xpring SDK"/>
 
 This library is made up of [protocol buffers](https://developers.google.com/protocol-buffers) which form common model objects for Xpring SDK. There are also [gRPC service definitions](https://grpc.io), which form a network interface for  Xpring SDK.
 
@@ -16,7 +16,7 @@ This library is widely consumed, including by:
 - Xpring SDK's Server Side Component
 
 
-Because this library is widely consumed, it must remain backwards compatible. In most cases, Xpring will be cautious to add new functionality as it increases the maintenance burden of backwards compatibility. 
+Because this library is widely consumed, it must remain backwards compatible. In most cases, Xpring will be cautious to add new functionality as it increases the maintenance burden of backwards compatibility.
 
 If you make a code change to this library, you are more than likely adding a new feature in one or more dependent libraries. Your [pull requests](#requirements-for-a-successful-pull-request) for all code changes should document how the new fields and functionality will be used.
 
