@@ -10,11 +10,15 @@ TODO: Diagram of Xpring SDK
 
 This library is made up of [protocol buffers](https://developers.google.com/protocol-buffers) which form common model objects for Xpring SDK. There are also [gRPC service definitions](https://grpc.io), which form a network interface for  Xpring SDK.
 
-This library is consumed by both the [Xpring Common JavaScript](https://github.com/xpring-eng/xpring-common-js), the server side component (TODO: link), and the [language specific client libraries](https://github.com/xpring-eng/xpring-sdk#client-side-libraries).
+This library is widely consumed, including by:
+- [Language Specific Libraries in Xpring SDK](https://github.com/xpring-eng/xpring-sdk#client-side-libraries)
+- [Xpring Common JavaScript](https://github.com/xpring-eng/xpring-common-js)
+- Xpring SDK's Server Side Component
 
-This library is widely consumed and must remain backwards compatible. Therefore, Xpring will be fairly judicious about what new functionality gets added here.
 
-Additionally, code changes to this library will likely be accompanied by a feature change in one or more dependent libraries. A new pull request should document how the new fields and functionality will be used.
+Because this library is widely consumed, it must remain backwards compatible. In most cases, Xpring will be cautious to add new functionality as it increases the maintenance burden of backwards compatibility. 
+
+If you make a code change to this library, you are more than likely adding a new feature in one or more dependent libraries. Your [pull requests](#requirements-for-a-successful-pull-request) for all code changes should document how the new fields and functionality will be used.
 
 ## Requirements for a Successful Pull request
 
