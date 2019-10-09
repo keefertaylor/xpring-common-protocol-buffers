@@ -1,4 +1,4 @@
-[![CircleCI](https://img.shields.io/circleci/build/github/xpring-eng/xpring-common-protos/master?style=flat-square&token=0c0a6cd726bae3421cc9bbc52aa603946689b17e)](https://circleci.com/gh/xpring-eng/xpring-common-protocol-buffers/tree/master)
+[![CircleCI](https://img.shields.io/circleci/build/github/xpring-eng/xpring-common-protocol-buffers/master?style=flat-square&token=0c0a6cd726bae3421cc9bbc52aa603946689b17e)](https://circleci.com/gh/xpring-eng/xpring-common-protocol-buffers/tree/master)
 
 # Xpring Common Protocol Buffers
 
