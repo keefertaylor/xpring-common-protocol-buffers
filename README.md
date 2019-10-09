@@ -2,9 +2,9 @@
 
 # Xpring Common Protocol Buffers
 
-The Xpring Common Protocol Buffers Library provides common protocol buffer models and gRPC service definitions to all client side libraries in the [Xpring SDK](https://github.com/xpring-eng/xpring-sdk). This library is built to be consumed as a submodule to other libraries, rather than a standalone library.
+The Xpring Common Protocol Buffers Library provides common protocol buffer models and gRPC service definitions to all client side libraries in [Xpring SDK](https://github.com/xpring-eng/xpring-sdk). This library is built to be consumed as a submodule to other libraries, rather than a standalone library.
 
-Developers should use one of the language specific libraries for the [Xpring SDK](https://github.com/xpring-eng/xpring-sdk#client-side-libraries), rather than consuming this library directly.
+Developers should use one of the language specific libraries for [Xpring SDK](https://github.com/xpring-eng/xpring-sdk#client-side-libraries), rather than consuming this library directly.
 
 # Contributing
 
@@ -18,4 +18,4 @@ Thank you to all the users who have contributed to this library!
 
 # License
 
-The Xpring SDK is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
+Xpring SDK is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
