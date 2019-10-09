@@ -9,3 +9,12 @@ Developers should use one of the language specific libraries for the [Xpring SDK
 # Contributing
 
 Pull requests are welcome! To get started with building this library and opening pull requests, please see [contributing.md](CONTRIBUTING.md).
+
+Thanks to all the people who contribute.
+<a href="https://github.com/xpring-eng/xpring-common-protocol-buffers/graphs/contributors">
+  <img src="https://contributors-img.firebaseapp.com/image?repo=xpring-eng/xpring-common-protocol-buffers" />
+</a>
+
+# License
+
+The Xpring SDK is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
