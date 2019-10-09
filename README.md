@@ -10,7 +10,8 @@ Developers should use one of the language specific libraries for the [Xpring SDK
 
 Pull requests are welcome! To get started with building this library and opening pull requests, please see [contributing.md](CONTRIBUTING.md).
 
-Thanks to all the people who contribute.
+Thank you to all the users who have contributed to this library!
+
 <a href="https://github.com/xpring-eng/xpring-common-protocol-buffers/graphs/contributors">
   <img src="https://contributors-img.firebaseapp.com/image?repo=xpring-eng/xpring-common-protocol-buffers" />
 </a>
