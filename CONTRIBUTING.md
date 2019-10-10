@@ -22,11 +22,10 @@ If you make a code change to this library, you are more than likely adding a new
 
 ## Requirements for a Successful Pull request
 
-- Title is prefixed with "[WIP]" if the pull request is not ready for review.
 - Continuous integration tests pass on pull request.
 - Documentation in pull request about how the new functionality will be used in client libraries.
-- Changes to protocol buffers adheres to [Google's Protocol Buffer style guide](https://developers.google.com/protocol-buffers/docs/style).
-- Changes to gRPC services adhere to [Google's API design guidelines](https://cloud.google.com/apis/design/).
+- Pull request is free of lint errors. Please see [Google's Protocol Buffer style guide] and [Google's API design guidelines](https://cloud.google.com/apis/design/).
+- Pull Requests are [marked as drafts](https://github.blog/2019-02-14-introducing-draft-pull-requests/) until they are ready for review.
 - Text and comments of pull request adhere to the [code of conduct](CODE_OF_CONDUCT.md) for this repository.
 
 ## Building The Library
@@ -48,6 +47,19 @@ cd grpc
 git submodule update --init
 make
 
+# Install prototool linter
+# OSX
+brew install prototool
+# Linux
+$ curl -sSL \
+  https://github.com/uber/prototool/releases/download/v1.8.0/prototool-$(uname -s)-$(uname -m) \
+  -o /usr/local/bin/prototool && \
+  chmod +x /usr/local/bin/prototool
+# Otherwise, see: https://github.com/uber/prototool#installation
+
 # Build the protocol buffers!
 protoc --proto_path=./proto/ --cpp_out ./generated/  --grpc_out=./generated --plugin=protoc-gen-grpc=grpc/bins/opt/grpc_cpp_plugin ./proto/*.proto
+
+# Run linter
+$ prototool lint
 ```
