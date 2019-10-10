@@ -27,6 +27,7 @@ jobs:
           name: "Install GRPC"
           command: |
             if [ ! -d grpc ]; then
+            cd ~
             git clone -b $(curl -L https://grpc.io/release) https://github.com/grpc/grpc
             cd grpc
             git submodule update --init
@@ -38,7 +39,7 @@ jobs:
       - run:
           name: "Compile GRPC Protocol Buffers Services"
           command: |
-            protoc --proto_path=./proto/ --cpp_out ./generated/  --grpc_out=./generated --plugin=protoc-gen-grpc=grpc/bins/opt/grpc_cpp_plugin ./proto/*.proto
+            protoc --proto_path=./proto/ --cpp_out ./generated/  --grpc_out=./generated --plugin=protoc-gen-grpc=~/grpc/bins/opt/grpc_cpp_plugin ./proto/*.proto
 
       - run:
           name: "Lint"
