@@ -14,7 +14,7 @@ jobs:
       # GRPC CPP is built from source. Try to restore the latest release from cache.
       - restore_cache:
           keys:
-            - grpc-cpp-BREAK
+            - grpc-cpp
 
       - protobuf/install
       - run:
