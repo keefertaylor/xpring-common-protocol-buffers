@@ -22,11 +22,6 @@ jobs:
           command: |
             sudo curl -sSL https://github.com/uber/prototool/releases/download/v1.8.0/prototool-$(uname -s)-$(uname -m) -o /usr/local/bin/prototool
             sudo chmod +x /usr/local/bin/prototool
-
-      - run:
-          name: "Lint"
-          command:
-
       # Install GRPC if there was not a cache hit.
       - run:
           name: "Install GRPC"
@@ -44,6 +39,16 @@ jobs:
           name: "Compile GRPC Protocol Buffers Services"
           command: |
             protoc --proto_path=./proto/ --cpp_out ./generated/  --grpc_out=./generated --plugin=protoc-gen-grpc=grpc/bins/opt/grpc_cpp_plugin ./proto/*.proto
+
+      - run:
+          name: "Lint"
+          command:
+            prototool lint
+
+      - run:
+          name: "Check Breakages"
+          command:
+            prototool break check
 
       # Save built GRPC artifacts to cache.
       - save_cache:
