@@ -17,6 +17,13 @@ jobs:
             - grpc-cpp
 
       - protobuf/install
+      - run:
+          name: "Install Linter"
+          command: |
+            curl -sSL \
+            https://github.com/uber/prototool/releases/download/v1.8.0/prototool-$(uname -s)-$(uname -m) \
+            -o /usr/local/bin/prototool
+            chmod +x /usr/local/bin/prototool
 
       # Install GRPC if there was not a cache hit.
       - run:
