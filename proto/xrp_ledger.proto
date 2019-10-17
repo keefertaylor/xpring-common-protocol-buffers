@@ -10,6 +10,7 @@ import "submit_signed_transaction_response.proto";
 import "fee.proto";
 
 option java_package = "io.xpring.proto";
+option java_outer_classname = "XrpLedgerProto";
 option java_multiple_files = true;
 
 // RPCs available to interact with the XRP Ledger.
