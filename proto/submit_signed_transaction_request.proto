@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package io.xpring;
 
+option java_package = "io.xpring.proto";
+
 import "signed_transaction.proto";
 
 // A request to submit the signed transaction to the ledger.

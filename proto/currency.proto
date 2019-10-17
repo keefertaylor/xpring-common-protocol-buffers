@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option java_package = "io.xpring.proto";
+
 package io.xpring;
 
 // Available currencies.
