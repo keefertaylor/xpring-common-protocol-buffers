@@ -1,8 +1,9 @@
 syntax = "proto3";
 
-option java_package = "io.xpring.proto";
-
 package io.xpring;
+
+option java_multiple_files = true;
+option java_package = "io.xpring.proto";
 
 // Available currencies.
 // Next field: 1

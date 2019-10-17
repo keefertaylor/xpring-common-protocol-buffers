@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package io.xpring;
 
+option java_multiple_files = true;
 option java_package = "io.xpring.proto";
 
 // A request for the current transaction fee on the ledger.
