@@ -1,14 +1,17 @@
 syntax = "proto3";
-option java_package = "io.xpring.proto";
 
 package io.xpring;
 
 import "account_info.proto";
+import "fee.proto";
 import "get_account_info_request.proto";
 import "get_fee_request.proto";
 import "submit_signed_transaction_request.proto";
 import "submit_signed_transaction_response.proto";
-import "fee.proto";
+
+option java_package = "io.xpring.proto";
+option java_outer_classname = "XrpLedgerProto";
+option java_multiple_files = true;
 
 // RPCs available to interact with the XRP Ledger.
 service XRPLedgerAPI {

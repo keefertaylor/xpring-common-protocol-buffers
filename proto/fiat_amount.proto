@@ -4,6 +4,10 @@ package io.xpring;
 
 import "currency.proto";
 
+option java_multiple_files = true;
+option java_outer_classname = "FiatAmountProto";
+option java_package = "io.xpring.proto";
+
 // A representation of an amount of currency in fiat.
 // Next field: 4
 message FiatAmount {

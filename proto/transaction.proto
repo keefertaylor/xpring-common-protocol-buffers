@@ -5,6 +5,10 @@ package io.xpring;
 import "payment.proto";
 import "xrp_amount.proto";
 
+option java_multiple_files = true;
+option java_outer_classname = "TransactionProto";
+option java_package = "io.xpring.proto";
+
 // A class encompassing all transactions.
 // Next field: 6.
 message Transaction {

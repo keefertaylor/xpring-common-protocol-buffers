@@ -2,6 +2,10 @@ syntax = "proto3";
 
 package io.xpring;
 
+option java_multiple_files = true;
+option java_outer_classname = "SubmitSignedTransactionResponseProto";
+option java_package = "io.xpring.proto";
+
 // A response when a signed transaction is submitted to the ledger.
 // Next field: 5
 message SubmitSignedTransactionResponse {
