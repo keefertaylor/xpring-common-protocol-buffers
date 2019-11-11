@@ -23,4 +23,7 @@ service XRPLedgerAPI {
 
   // Submit a signed transaction to the XRP Ledger.
   rpc SubmitSignedTransaction (SubmitSignedTransactionRequest) returns (SubmitSignedTransactionResponse);
+
+  // Returns the transaction status.
+  rpc Tx(TxRequest) returns (TxResponse);
 }
