@@ -28,7 +28,7 @@ message Transaction {
     }
 
     // The public key of the account which signed the transaction in hexadecimal.
-    bytes signing_public_key_hex = 5;
+    string signing_public_key_hex = 5;
 }
 
 message Path {
