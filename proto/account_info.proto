@@ -15,7 +15,7 @@ message AccountInfo {
   XRPAmount balance = 1;
 
   // The sequence number of the next valid transaction for this account.
-  uint64 sequence = 2;
+  uint32 sequence = 2;
 
   // The number of objects this account owns in the ledger, which contributes to its owner reserve.
   uint64 owner_count = 3;
