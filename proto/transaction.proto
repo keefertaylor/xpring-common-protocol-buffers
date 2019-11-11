@@ -3,11 +3,8 @@ syntax = "proto3";
 package io.xpring;
 
 import "payment.proto";
+import "amount.proto";
 import "xrp_amount.proto";
-
-option java_multiple_files = true;
-option java_outer_classname = "TransactionProto";
-option java_package = "io.xpring.proto";
 
 // A class encompassing all transactions.
 // Next field: 6.
@@ -19,7 +16,7 @@ message Transaction {
     XRPAmount fee = 2;
 
     // The sequence number for the transaction.
-    uint64 sequence = 3;
+    uint32 sequence = 3;
 
     // Data specific to a the type of transaction being submitted.
     oneof transaction_data {
@@ -27,5 +24,29 @@ message Transaction {
     }
 
     // The public key of the account which signed the transaction in hexadecimal.
-    string signing_public_key_hex = 5;
+    bytes signing_public_key_hex = 5;
+
+    bytes signature = 6;
+
+    uint32 flags = 7;
+
+    uint32 last_ledger_sequence = 8;
+
+    repeated Path paths = 9;
+
+    CurrencyAmount send_max = 10;
+}
+
+message Path {
+
+    repeated PathElement elements = 1;
+}
+
+message PathElement {
+
+    string account = 1;
+
+    string currency = 2;
+
+    string issuer = 3;
 }

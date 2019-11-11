@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package io.xpring;
+
+message TxRequest {
+    // The hash of the transaction.
+    bytes hash = 1;
+}
