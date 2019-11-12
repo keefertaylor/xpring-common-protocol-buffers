@@ -7,7 +7,7 @@ option java_outer_classname = "TransactionStatus";
 option java_package = "io.xpring.proto";
 
 // The status of a transaction on the XRP Ledger.
-// Next field: 2
+// Next field: 3
 message TransactionStatus {
   // The transaction status code.
   string transactionStatusCode = 1;
