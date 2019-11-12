@@ -11,10 +11,4 @@ option java_package = "io.xpring.proto";
 message GetTransactionStatusRequest {
   // The hash of the transaction to retrieve.
   string transactionHash = 1;
-
-  // The transaction status code.
-  string transactionStatusCode = 1;
-
-  // Whether the transaction was validated.
-  bool validated = 2;
 }
