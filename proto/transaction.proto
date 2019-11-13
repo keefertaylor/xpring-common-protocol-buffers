@@ -30,5 +30,5 @@ message Transaction {
     string signing_public_key_hex = 5;
 
     // The highest ledger index this transaction can appear in.
-    Uint32 last_ledger_sequence = 6;
+    uint32 last_ledger_sequence = 6;
 }
