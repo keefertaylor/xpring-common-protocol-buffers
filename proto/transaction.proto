@@ -10,7 +10,7 @@ option java_outer_classname = "TransactionProto";
 option java_package = "io.xpring.proto";
 
 // A class encompassing all transactions.
-// Next field: 6.
+// Next field: 7.
 message Transaction {
     // The account originating the transaction.
     string account = 1;
@@ -28,4 +28,7 @@ message Transaction {
 
     // The public key of the account which signed the transaction in hexadecimal.
     string signing_public_key_hex = 5;
+
+    // The highest ledger index this transaction can appear in.
+    Uint32 last_ledger_sequence = 6;
 }
