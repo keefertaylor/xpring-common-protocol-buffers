@@ -16,5 +16,5 @@ message TransactionStatus {
   bool validated = 2;
 
   // The lastLedgerSequence this transaction will be valid in.
-  uint32 lastLedgerSequence = 3;
+  uint32 last_ledger_sequence = 3;
 }
