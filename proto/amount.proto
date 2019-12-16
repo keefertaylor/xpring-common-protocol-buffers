@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package rpc.v1;
+package io.xpring;
 
 message CurrencyAmount {
     oneof amount {

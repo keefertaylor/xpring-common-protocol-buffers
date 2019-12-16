@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package rpc.v1;
+package io.xpring;
 
-import "rpc/v1/transaction.proto";
-import "rpc/v1/meta.proto";
+import "transaction.proto";
+import "meta.proto";
 
 message GetTxRequest {
     // hash of the transaction. 32 bytes

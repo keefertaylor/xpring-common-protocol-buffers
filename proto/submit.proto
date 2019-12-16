@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package rpc.v1;
+package io.xpring;
 
-import "rpc/v1/meta.proto";
+import "meta.proto";
 
 // A request to submit the signed transaction to the ledger.
 message SubmitTransactionRequest {

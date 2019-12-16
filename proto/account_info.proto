@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package rpc.v1;
+package io.xpring;
 
-import "rpc/v1/ledger_objects.proto";
-import "rpc/v1/amount.proto";
+import "ledger_objects.proto";
+import "amount.proto";
 
 // A request to get info about an account.
 message GetAccountInfoRequest {

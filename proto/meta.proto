@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package rpc.v1;
+package io.xpring;
 
-import "rpc/v1/amount.proto";
-import "rpc/v1/ledger_objects.proto";
+import "amount.proto";
+import "ledger_objects.proto";
 
 message Meta {
     // index in ledger

@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package rpc.v1;
+package io.xpring;
 
-import "rpc/v1/amount.proto";
+import "amount.proto";
 
 // A request for the current transaction fee on the ledger.
 message GetFeeRequest {

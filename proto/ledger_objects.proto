@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package rpc.v1;
+package io.xpring;
 
-import "rpc/v1/amount.proto";
+import "amount.proto";
 
 message LedgerObject {
 
