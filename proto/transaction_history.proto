@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package io.xpring;
+
+import "transaction.proto";
+
+option java_multiple_files = true;
+option java_outer_classname = "TransactionHistoryProto";
+option java_package = "io.xpring.proto";
+
+// A transaction history for an account.
+// Next field: 2.
+message TransactionHistory {
+    // The list of transactions in the history.
+    repeated Transaction transactions = 3;
+}

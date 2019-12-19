@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package io.xpring;
+
+import "payment.proto";
+import "xrp_amount.proto";
+
+option java_multiple_files = true;
+option java_outer_classname = "GetTransactionHistoryRequest.proto";
+option java_package = "io.xpring.proto";
+
+// A request for the transaction history of an account.
+// Next field: 7.
+message GetTransactionHistoryRequest {
+    // The account whose history you are interested in.
+    string account = 1;
+}
