@@ -1,7 +1,5 @@
 syntax = "proto3";
 
-package io.xpring;
-
 import "meta.proto";
 
 // A request to submit the signed transaction to the ledger.

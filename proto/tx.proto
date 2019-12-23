@@ -1,7 +1,5 @@
 syntax = "proto3";
 
-package io.xpring;
-
 import "transaction.proto";
 import "meta.proto";
 

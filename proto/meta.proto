@@ -1,6 +1,5 @@
 syntax = "proto3";
 
-package io.xpring;
 
 import "amount.proto";
 import "ledger_objects.proto";

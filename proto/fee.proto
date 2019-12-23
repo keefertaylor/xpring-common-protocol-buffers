@@ -1,7 +1,5 @@
 syntax = "proto3";
 
-package io.xpring;
-
 import "amount.proto";
 
 // A request for the current transaction fee on the ledger.

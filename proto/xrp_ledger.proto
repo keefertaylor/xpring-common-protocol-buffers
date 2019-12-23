@@ -1,7 +1,5 @@
 syntax = "proto3";
 
-package io.xpring;
-
 import "account_info.proto";
 import "fee.proto";
 import "submit.proto";
