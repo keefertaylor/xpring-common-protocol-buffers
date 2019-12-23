@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package rpc.v1;
+
 
 message CurrencyAmount {
     oneof amount {

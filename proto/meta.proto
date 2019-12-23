@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package rpc.v1;
+
 
 import "amount.proto";
 import "ledger_objects.proto";

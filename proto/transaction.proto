@@ -1,5 +1,8 @@
 syntax = "proto3";
 
+package rpc.v1;
+
+
 import "amount.proto";
 
 // A class encompassing all transactions.
