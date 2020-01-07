@@ -13,7 +13,7 @@ option java_package = "io.xpring.proto";
 // Next field: 7.
 message Transaction {
     // The account originating the transaction.
-    string account = 1;
+    uint64 account = 1;
 
     // The fee attached to the transaction.
     XRPAmount fee = 2;
