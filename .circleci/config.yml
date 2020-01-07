@@ -49,7 +49,7 @@ jobs:
       - run:
           name: "Check Breakages"
           command:
-            prototool break check
+            prototool break check --git-branch master
 
       # Save built GRPC artifacts to cache.
       - save_cache:
